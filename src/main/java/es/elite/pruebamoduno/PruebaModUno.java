@@ -2,6 +2,8 @@ package es.elite.pruebamoduno;
 
 // a ver si va a ver si va a ver si va
 
+// si va chat, emogi calavera
+
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
