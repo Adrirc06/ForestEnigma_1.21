@@ -5,7 +5,7 @@ pluginManagement {
             name = 'MinecraftForge'
             url = 'https://maven.minecraftforge.net/'
         }
-        maven { url = 'https://maven.parchmentmc.org' } // Repositorio de parchment. Solo Dios sabe pa que coño sirve
+        maven { url = 'https://maven.parchmentmc.org' } // Add this line
     }
 }
 
