@@ -2,7 +2,7 @@ package es.elite.pruebamoduno;
 
 // a ver si va a ver si va a ver si va
 
-// sampe putero
+//Hector putero
 
 // si va chat, emogi calavera
 
