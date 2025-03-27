@@ -1,8 +1,8 @@
-package net.elpruebas.prueba.block;
+package es.elite.forestenigma.block;
 
 
-import net.elpruebas.prueba.Prueba;
-import net.elpruebas.prueba.item.ModItems;
+import es.elite.forestenigma.ForestEnigma;
+import es.elite.forestenigma.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, Prueba.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, ForestEnigma.MOD_ID);
 
     public static final RegistryObject<Block> CARITA_BLOCK = registerBlock("carita_block",
             () -> new Block(BlockBehaviour.Properties.of()

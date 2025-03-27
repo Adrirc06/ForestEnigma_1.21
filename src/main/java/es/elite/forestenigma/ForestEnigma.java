@@ -1,8 +1,8 @@
-package net.elpruebas.prueba;
+package es.elite.forestenigma;
 
 import com.mojang.logging.LogUtils;
-import net.elpruebas.prueba.block.ModBlocks;
-import net.elpruebas.prueba.item.ModItems;
+import es.elite.forestenigma.block.ModBlocks;
+import es.elite.forestenigma.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,15 +19,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(Prueba.MOD_ID)
-public class Prueba
+@Mod(ForestEnigma.MOD_ID)
+public class ForestEnigma
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "prueba";
+    public static final String MOD_ID = "forestenigma";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public Prueba()
+    public ForestEnigma()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
