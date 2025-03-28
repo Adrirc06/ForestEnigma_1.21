@@ -24,7 +24,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    public static final RegistryObject<Block> MOSSY_WOOD_BLOCK = registerBlock("mossy_wood_block",
+    public static final RegistryObject<Block> MOSSY_WOOD_LOG = registerBlock("mossy_wood_log",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).sound(SoundType.WOOD)));
 
