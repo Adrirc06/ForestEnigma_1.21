@@ -62,6 +62,8 @@ public class ForestEnigma
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.CARITA_BLOCK);
             event.accept(ModBlocks.MOSSY_WOOD_LOG);
+            event.accept(ModBlocks.STRIPPED_MOSSY_WOOD_LOG);
+            event.accept(ModBlocks.MOSSY_WOOD_PLANKS);
         }
 
 

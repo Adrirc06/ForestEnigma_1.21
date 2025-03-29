@@ -28,6 +28,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> STRIPPED_MOSSY_WOOD_LOG = registerBlock("stripped_mossy_wood_log",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MOSSY_WOOD_PLANKS = registerBlock("mossy_wood_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.WOOD)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
