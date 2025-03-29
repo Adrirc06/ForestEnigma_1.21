@@ -1,7 +1,10 @@
 {
   "item.forestenigma.carita": "Smiley",
+
   "block.forestenigma.carita_block": "Smiley block",
   "block.forestenigma.mossy_wood_log": "Mossy wood log",
   "block.forestenigma.stripped_mossy_wood_log": "Stripped mossy wood log",
-  "block.forestenigma.mossy_wood_planks": "Mossy wood planks"
+  "block.forestenigma.mossy_wood_planks": "Mossy wood planks",
+
+  "creativetab.forestenigma.forest_enigma_items": "The Forest Enigma"
 }

@@ -2,6 +2,7 @@ package es.elite.forestenigma;
 
 import com.mojang.logging.LogUtils;
 import es.elite.forestenigma.block.ModBlocks;
+import es.elite.forestenigma.item.ModCreativeModeTabs;
 import es.elite.forestenigma.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,6 +38,8 @@ public class ForestEnigma
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -55,16 +58,9 @@ public class ForestEnigma
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CARITA);
-        }
 
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.CARITA_BLOCK);
-            event.accept(ModBlocks.MOSSY_WOOD_LOG);
-            event.accept(ModBlocks.STRIPPED_MOSSY_WOOD_LOG);
-            event.accept(ModBlocks.MOSSY_WOOD_PLANKS);
-        }
+        // LOS ITEMS YA NO SE AÑADEN AL CREATIVO AQUI
+        // SE AÑADEN EN LA CLASE ModCreativeModeTabs DEL PAQUETE item
 
 
     }
