@@ -3,6 +3,8 @@
 
   "block.forestenigma.carita_block": "Bloque de carita",
   "block.forestenigma.mossy_wood_log": "Tronco de madera musgosa",
+  "block.forestenigma.mossy_wood": "Madera musgosa",
   "block.forestenigma.stripped_mossy_wood_log": "Tronco de madera musgosa sin corteza",
+  "block.forestenigma.stripped_mossy_wood": "Madera musgosa sin corteza",
   "block.forestenigma.mossy_wood_planks": "Tablones de madera musgosa"
 }

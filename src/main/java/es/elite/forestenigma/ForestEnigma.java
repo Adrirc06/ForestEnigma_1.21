@@ -64,6 +64,8 @@ public class ForestEnigma
             event.accept(ModBlocks.MOSSY_WOOD_LOG);
             event.accept(ModBlocks.STRIPPED_MOSSY_WOOD_LOG);
             event.accept(ModBlocks.MOSSY_WOOD_PLANKS);
+            event.accept(ModBlocks.MOSSY_WOOD);
+            event.accept(ModBlocks.STRIPPED_MOSSY_WOOD);
         }
 
 
