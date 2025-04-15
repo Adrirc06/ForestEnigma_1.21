@@ -24,6 +24,7 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CARITA_BLOCK.get());
         dropSelf(ModBlocks.MOSSY_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_MOSSY_WOOD.get());
+        dropSelf(ModBlocks.MOSSY_TREE_LEAVES.get());
     }
 
     @Override

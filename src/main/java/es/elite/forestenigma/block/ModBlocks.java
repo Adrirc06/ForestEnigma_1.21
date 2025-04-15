@@ -61,6 +61,9 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> MOSSY_TREE_LEAVES  = registerBlock("mossy_tree_leaves",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
