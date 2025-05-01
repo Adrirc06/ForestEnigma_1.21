@@ -9,12 +9,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -63,6 +62,28 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MOSSY_TREE_LEAVES  = registerBlock("mossy_tree_leaves",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<StairBlock> MOSSY_WOOD_STAIRS = registerBlock("mossy_wood_stairs",
+            () -> new StairBlock(ModBlocks.MOSSY_WOOD_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<SlabBlock> MOSSY_WOOD_SLAB = registerBlock("mossy_wood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).noCollission()));
+
+    public static final RegistryObject<PressurePlateBlock> MOSSY_WOOD_PRESSURE_PLATE = registerBlock("mossy_wood_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
+    public static final RegistryObject<ButtonBlock> MOSSY_WOOD_BUTTON = registerBlock("mossy_wood_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 30,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
+
+    public static final RegistryObject<FenceBlock> MOSSY_WOOD_FENCE = registerBlock("mossy_wood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<FenceGateBlock> MOSSY_WOOD_FENCE_GATE = registerBlock("mossy_wood_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE)));
+
+    public static final RegistryObject<DoorBlock> MOSSY_WOOD_DOOR = registerBlock("mossy_wood_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).noOcclusion()));
+    public static final RegistryObject<TrapDoorBlock> MOSSY_WOOD_TRAPDOOR = registerBlock("mossy_wood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

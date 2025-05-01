@@ -35,5 +35,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.MOSSY_WOOD_PLANKS.get());
 
+        tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.MOSSY_WOOD_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MOSSY_WOOD_FENCE_GATE.get());
     }
 }

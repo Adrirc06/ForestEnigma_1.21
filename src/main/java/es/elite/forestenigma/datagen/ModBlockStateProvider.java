@@ -31,6 +31,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MOSSY_WOOD);
         blockItem(ModBlocks.STRIPPED_MOSSY_WOOD_LOG);
         blockItem(ModBlocks.STRIPPED_MOSSY_WOOD);
+
+        stairsBlock(ModBlocks.MOSSY_WOOD_STAIRS.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+        slabBlock(ModBlocks.MOSSY_WOOD_SLAB.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+
+        buttonBlock(ModBlocks.MOSSY_WOOD_BUTTON.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+
+        fenceBlock(ModBlocks.MOSSY_WOOD_FENCE.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+        fenceGateBlock(ModBlocks.MOSSY_WOOD_FENCE_GATE.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.MOSSY_WOOD_DOOR.get(), modLoc("block/mossy_wood_door_bottom"), modLoc("block/mossy_wood_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.MOSSY_WOOD_TRAPDOOR.get(), modLoc("block/mossy_wood_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.MOSSY_WOOD_STAIRS);
+        blockItem(ModBlocks.MOSSY_WOOD_SLAB);
+        blockItem(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE);
+        blockItem(ModBlocks.MOSSY_WOOD_FENCE_GATE);
+        blockItem(ModBlocks.MOSSY_WOOD_TRAPDOOR, "_bottom");
     }
 
 

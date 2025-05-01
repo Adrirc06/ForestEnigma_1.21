@@ -25,6 +25,18 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.MOSSY_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_MOSSY_WOOD.get());
         dropSelf(ModBlocks.MOSSY_TREE_LEAVES.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_BUTTON.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_FENCE.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_FENCE_GATE.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_TRAPDOOR.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.MOSSY_WOOD_STAIRS.get());
+
+        this.add(ModBlocks.MOSSY_WOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MOSSY_WOOD_SLAB.get()));
+
+        this.add(ModBlocks.MOSSY_WOOD_DOOR.get(),
+                block -> createDoorTable(ModBlocks.MOSSY_WOOD_DOOR.get()));
     }
 
     @Override

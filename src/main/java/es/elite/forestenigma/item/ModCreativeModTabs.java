@@ -25,6 +25,14 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.STRIPPED_MOSSY_WOOD.get());
                         output.accept(ModBlocks.MOSSY_WOOD_PLANKS.get());
                         output.accept(ModBlocks.MOSSY_TREE_LEAVES.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_BUTTON.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_STAIRS.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_SLAB.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_FENCE.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_FENCE_GATE.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_DOOR.get());
+                        output.accept(ModBlocks.MOSSY_WOOD_TRAPDOOR.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {
