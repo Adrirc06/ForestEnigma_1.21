@@ -67,13 +67,13 @@ public class ModBlocks {
             () -> new StairBlock(ModBlocks.MOSSY_WOOD_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<SlabBlock> MOSSY_WOOD_SLAB = registerBlock("mossy_wood_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).noCollission()));
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
 
     public static final RegistryObject<PressurePlateBlock> MOSSY_WOOD_PRESSURE_PLATE = registerBlock("mossy_wood_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
     public static final RegistryObject<ButtonBlock> MOSSY_WOOD_BUTTON = registerBlock("mossy_wood_button",
             () -> new ButtonBlock(BlockSetType.OAK, 30,
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON).noCollission()));
 
     public static final RegistryObject<FenceBlock> MOSSY_WOOD_FENCE = registerBlock("mossy_wood_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
