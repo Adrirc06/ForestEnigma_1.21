@@ -24,7 +24,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MOSSY_WOOD.get())
                 .add(ModBlocks.STRIPPED_MOSSY_WOOD_LOG.get())
                 .add(ModBlocks.STRIPPED_MOSSY_WOOD.get())
-                .add(ModBlocks.MOSSY_WOOD_PLANKS.get());
+                .add(ModBlocks.MOSSY_WOOD_PLANKS.get())
+                .add(ModBlocks.MOSSY_WOOD_STAIRS.get())
+                .add(ModBlocks.MOSSY_WOOD_SLAB.get())
+                .add(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE.get())
+                .add(ModBlocks.MOSSY_WOOD_BUTTON.get())
+                .add(ModBlocks.MOSSY_WOOD_FENCE.get())
+                .add(ModBlocks.MOSSY_WOOD_FENCE_GATE.get())
+                .add(ModBlocks.MOSSY_WOOD_DOOR.get())
+                .add(ModBlocks.MOSSY_WOOD_TRAPDOOR.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MOSSY_WOOD_LOG.get())
