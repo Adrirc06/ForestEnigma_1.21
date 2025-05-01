@@ -30,5 +30,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.MOSSY_WOOD_PLANKS.get().asItem());
+
+        tag(ModTags.Items.MOSSY_WOOD_BLOCKS)
+                .add(ModBlocks.MOSSY_WOOD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MOSSY_WOOD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MOSSY_WOOD.get().asItem())
+                .add(ModBlocks.MOSSY_WOOD.get().asItem());
     }
 }

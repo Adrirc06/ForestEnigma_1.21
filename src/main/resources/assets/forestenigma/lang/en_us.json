@@ -1,10 +1,13 @@
 {
   "item.forestenigma.carita": "Smiley",
-  "block.forestenigma.carita_block": "Smiley block",
-  "block.forestenigma.mossy_wood_log": "Mossy wood log",
-  "block.forestenigma.mossy_wood": "Mossy wood",
-  "block.forestenigma.stripped_mossy_wood_log": "Stripped mossy wood log",
-  "block.forestenigma.stripped_mossy_wood": "Stripped mossy wood",
-  "block.forestenigma.mossy_wood_planks": "Mossy wood planks",
-  "block.forestenigma.mossy_tree_leaves": "Mossy tree leaves"
+
+  "block.forestenigma.carita_block": "Smiley Block",
+  "block.forestenigma.mossy_wood_log": "Mossy Wood Log",
+  "block.forestenigma.mossy_wood": "Mossy Wood",
+  "block.forestenigma.stripped_mossy_wood_log": "Stripped Mossy Wood Log",
+  "block.forestenigma.stripped_mossy_wood": "Stripped Mossy Wood",
+  "block.forestenigma.mossy_wood_planks": "Mossy Wood Planks",
+  "block.forestenigma.mossy_tree_leaves": "Mossy Tree Leaves",
+
+  "creativetab.forestenigma.forestenigmatab": "The Forest Enigma"
 }
