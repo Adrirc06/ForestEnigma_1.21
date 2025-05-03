@@ -7,6 +7,7 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -24,7 +25,10 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CARITA_BLOCK.get());
         dropSelf(ModBlocks.MOSSY_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_MOSSY_WOOD.get());
-        dropSelf(ModBlocks.MOSSY_TREE_LEAVES.get());
+
+        this.add(ModBlocks.MOSSY_TREE_LEAVES.get(), block ->
+                createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+
         dropSelf(ModBlocks.MOSSY_WOOD_BUTTON.get());
         dropSelf(ModBlocks.MOSSY_WOOD_FENCE.get());
         dropSelf(ModBlocks.MOSSY_WOOD_FENCE_GATE.get());

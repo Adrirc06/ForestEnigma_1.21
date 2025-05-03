@@ -25,6 +25,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.MOSSY_WOOD_FENCE, ModBlocks.MOSSY_WOOD_PLANKS);
 
         simpleBlockItem(ModBlocks.MOSSY_WOOD_DOOR);
+
+        // saplingItem(ModBlocks.MOSSY_TREE_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(ForestEnigma.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

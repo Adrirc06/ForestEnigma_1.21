@@ -61,7 +61,22 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> MOSSY_TREE_LEAVES  = registerBlock("mossy_tree_leaves",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
 
     public static final RegistryObject<StairBlock> MOSSY_WOOD_STAIRS = registerBlock("mossy_wood_stairs",
             () -> new StairBlock(ModBlocks.MOSSY_WOOD_PLANKS.get().defaultBlockState(),

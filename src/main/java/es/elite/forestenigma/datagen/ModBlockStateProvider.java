@@ -3,6 +3,7 @@ package es.elite.forestenigma.datagen;
 import es.elite.forestenigma.ForestEnigma;
 import es.elite.forestenigma.block.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -20,7 +21,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.CARITA_BLOCK);
         blockWithItem(ModBlocks.MOSSY_WOOD_PLANKS);
-        blockWithItem(ModBlocks.MOSSY_TREE_LEAVES);
 
         logBlock(ModBlocks.MOSSY_WOOD_LOG.get());
         axisBlock(ModBlocks.MOSSY_WOOD.get(), blockTexture(ModBlocks.MOSSY_WOOD_LOG.get()), blockTexture(ModBlocks.MOSSY_WOOD_LOG.get()));
@@ -31,6 +31,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MOSSY_WOOD);
         blockItem(ModBlocks.STRIPPED_MOSSY_WOOD_LOG);
         blockItem(ModBlocks.STRIPPED_MOSSY_WOOD);
+
+        leavesBlock(ModBlocks.MOSSY_TREE_LEAVES);
+        // saplingBlock(ModBlocks.MOSSY_TREE_SAPLING);
 
         stairsBlock(ModBlocks.MOSSY_WOOD_STAIRS.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
         slabBlock(ModBlocks.MOSSY_WOOD_SLAB.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
@@ -51,6 +54,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MOSSY_WOOD_TRAPDOOR, "_bottom");
     }
 
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
