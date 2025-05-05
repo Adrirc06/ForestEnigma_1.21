@@ -1,6 +1,7 @@
 package es.elite.forestenigma.datagen;
 
 import es.elite.forestenigma.block.ModBlocks;
+import es.elite.forestenigma.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
@@ -41,6 +42,12 @@ public class ModLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.MOSSY_WOOD_DOOR.get(),
                 block -> createDoorTable(ModBlocks.MOSSY_WOOD_DOOR.get()));
+
+        this.add(ModBlocks.SYLVANITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.SYLVANITE_ORE.get(), ModItems.SYLVANITE.get()));
+        this.add(ModBlocks.DEEPSLATE_SYLVANITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_SYLVANITE_ORE.get(), ModItems.SYLVANITE.get()));
+        dropSelf(ModBlocks.SYLVANITE_BLOCK.get());
     }
 
     @Override

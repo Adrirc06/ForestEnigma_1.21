@@ -26,6 +26,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.MOSSY_WOOD_DOOR);
 
+        basicItem(ModItems.SYLVANITE.get());
+
         // saplingItem(ModBlocks.MOSSY_TREE_SAPLING);
     }
 

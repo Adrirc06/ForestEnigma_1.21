@@ -33,6 +33,10 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.MOSSY_WOOD_FENCE_GATE.get());
                         output.accept(ModBlocks.MOSSY_WOOD_DOOR.get());
                         output.accept(ModBlocks.MOSSY_WOOD_TRAPDOOR.get());
+                        output.accept(ModBlocks.SYLVANITE_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_SYLVANITE_ORE.get());
+                        output.accept(ModItems.SYLVANITE.get());
+                        output.accept(ModBlocks.SYLVANITE_BLOCK.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

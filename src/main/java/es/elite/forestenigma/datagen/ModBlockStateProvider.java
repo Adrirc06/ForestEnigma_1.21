@@ -52,6 +52,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MOSSY_WOOD_PRESSURE_PLATE);
         blockItem(ModBlocks.MOSSY_WOOD_FENCE_GATE);
         blockItem(ModBlocks.MOSSY_WOOD_TRAPDOOR, "_bottom");
+
+        blockWithItem(ModBlocks.SYLVANITE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SYLVANITE_ORE);
+        blockWithItem(ModBlocks.SYLVANITE_BLOCK);
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {

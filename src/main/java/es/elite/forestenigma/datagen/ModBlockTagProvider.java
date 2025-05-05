@@ -34,6 +34,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MOSSY_WOOD_DOOR.get())
                 .add(ModBlocks.MOSSY_WOOD_TRAPDOOR.get());
 
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.SYLVANITE_BLOCK.get())
+                .add(ModBlocks.SYLVANITE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SYLVANITE_ORE.get());
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.SYLVANITE_BLOCK.get())
+                .add(ModBlocks.SYLVANITE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SYLVANITE_ORE.get());
+
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MOSSY_WOOD_LOG.get())
                 .add(ModBlocks.STRIPPED_MOSSY_WOOD_LOG.get())

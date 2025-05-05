@@ -1,5 +1,6 @@
 {
   "item.forestenigma.carita": "Carita",
+  "item.forestenigma.sylvanite": "Silvanita",
 
   "block.forestenigma.carita_block": "Bloque de carita",
   "block.forestenigma.mossy_wood_log": "Tronco de madera musgosa",
@@ -16,6 +17,9 @@
   "block.forestenigma.mossy_wood_fence_gate": "Puerta de valla de madera musgosa",
   "block.forestenigma.mossy_wood_door": "Puerta de madera musgosa",
   "block.forestenigma.mossy_wood_trapdoor": "Trampilla de madera musgosa",
+  "block.forestenigma.sylvanite_ore": "Mena de silvanita",
+  "block.forestenigma.deepslate_sylvanite_ore": "Mena de silvanita de pizarra profunda",
+  "block.forestenigma.sylvanite_block": "Bloque de silvanita",
 
   "creativetab.forestenigma.forestenigmatab": "El Enigma del Bosque"
 }

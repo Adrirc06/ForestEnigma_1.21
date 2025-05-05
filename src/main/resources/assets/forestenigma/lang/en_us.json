@@ -1,5 +1,6 @@
 {
   "item.forestenigma.carita": "Smiley",
+  "item.forestenigma.sylvanite": "Sylvanite",
 
   "block.forestenigma.carita_block": "Smiley Block",
   "block.forestenigma.mossy_wood_log": "Mossy Wood Log",
@@ -15,7 +16,10 @@
   "block.forestenigma.mossy_wood_fence": "Mossy Wood Fence",
   "block.forestenigma.mossy_wood_fence_gate": "Mossy Wood Fence Gate",
   "block.forestenigma.mossy_wood_door": "Mossy Wood Door",
-  "block.forestenigma.mossy_wood_trapdoor": "Mossy Wood Trapdoormossy",
+  "block.forestenigma.mossy_wood_trapdoor": "Mossy Wood Trapdoor",
+  "block.forestenigma.sylvanite_ore": "Sylvanite Ore",
+  "block.forestenigma.deepslate_sylvanite_ore": "Deepslate Sylvanite Ore",
+  "block.forestenigma.sylvanite_block": "Sylvanite Block",
 
   "creativetab.forestenigma.forestenigmatab": "The Forest Enigma"
 }

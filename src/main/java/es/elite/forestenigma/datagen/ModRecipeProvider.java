@@ -21,7 +21,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_WOOD_PLANKS.get(), 4)
                 .requires(ModTags.Items.MOSSY_WOOD_BLOCKS)
-                        .unlockedBy(getHasName(ModBlocks.MOSSY_WOOD_LOG.get()), has(ModBlocks.MOSSY_WOOD_LOG.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModBlocks.MOSSY_WOOD_LOG.get()), has(ModBlocks.MOSSY_WOOD_LOG.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_WOOD.get(), 3)
                 .pattern("AA")
@@ -56,5 +56,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         trapdoorBuilder(ModBlocks.MOSSY_WOOD_TRAPDOOR.get(), Ingredient.of(ModBlocks.MOSSY_WOOD_PLANKS.get()))
                 .unlockedBy(getHasName(ModBlocks.MOSSY_WOOD_PLANKS.get()), has(ModBlocks.MOSSY_WOOD_PLANKS.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SYLVANITE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.SYLVANITE.get())
+                .unlockedBy(getHasName(ModItems.SYLVANITE.get()), has(ModItems.SYLVANITE.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SYLVANITE.get(), 9)
+                .requires(ModBlocks.SYLVANITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SYLVANITE_BLOCK.get()), has(ModBlocks.SYLVANITE_BLOCK.get())).save(pRecipeOutput);
     }
 }

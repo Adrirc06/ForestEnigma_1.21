@@ -100,6 +100,14 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> MOSSY_WOOD_TRAPDOOR = registerBlock("mossy_wood_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).noOcclusion()));
 
+    public static final RegistryObject<Block> SYLVANITE_ORE = registerBlock("sylvanite_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_ORE)));
+    public static final RegistryObject<Block> DEEPSLATE_SYLVANITE_ORE = registerBlock("deepslate_sylvanite_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
+    public static final RegistryObject<Block> SYLVANITE_BLOCK = registerBlock("sylvanite_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
