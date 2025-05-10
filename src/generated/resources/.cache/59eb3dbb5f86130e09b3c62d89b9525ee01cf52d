@@ -1,7 +1,8 @@
-// 1.21	2025-05-03T18:49:27.6419074	Loot Tables
+// 1.21	2025-05-10T22:25:08.0416596	Loot Tables
 f2a0146e592eb076b5d64a0547d75ef9afb5d492 data/forestenigma/loot_table/blocks/carita_block.json
 5e95b67b8bcd06bf5555b3e0434fb4871b20358a data/forestenigma/loot_table/blocks/deepslate_sylvanite_ore.json
-5dd4bce36499ea09e10ae21e207508a29cb5c9fd data/forestenigma/loot_table/blocks/mossy_tree_leaves.json
+0e4c1b11d1e3cc46f9c6f8f28bd7fef7756eabf3 data/forestenigma/loot_table/blocks/mossy_sapling.json
+1e9a60fc725099202deadc777c32e07cc1d7d430 data/forestenigma/loot_table/blocks/mossy_tree_leaves.json
 1fe80b46a7a311a23c67f9734d745dd08e607750 data/forestenigma/loot_table/blocks/mossy_wood.json
 a63a727376d25ba9e4c35763b84bf7771ee40387 data/forestenigma/loot_table/blocks/mossy_wood_button.json
 735327e0da452cfadcb34caa1075f5b436c280f8 data/forestenigma/loot_table/blocks/mossy_wood_door.json

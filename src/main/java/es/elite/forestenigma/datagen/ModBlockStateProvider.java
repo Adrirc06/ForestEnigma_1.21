@@ -33,7 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_MOSSY_WOOD);
 
         leavesBlock(ModBlocks.MOSSY_TREE_LEAVES);
-        // saplingBlock(ModBlocks.MOSSY_TREE_SAPLING);
+        saplingBlock(ModBlocks.MOSSY_SAPLING);
 
         stairsBlock(ModBlocks.MOSSY_WOOD_STAIRS.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
         slabBlock(ModBlocks.MOSSY_WOOD_SLAB.get(), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()), blockTexture(ModBlocks.MOSSY_WOOD_PLANKS.get()));
@@ -56,6 +56,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SYLVANITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SYLVANITE_ORE);
         blockWithItem(ModBlocks.SYLVANITE_BLOCK);
+
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {

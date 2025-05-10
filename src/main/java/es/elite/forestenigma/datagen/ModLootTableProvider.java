@@ -26,9 +26,10 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CARITA_BLOCK.get());
         dropSelf(ModBlocks.MOSSY_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_MOSSY_WOOD.get());
+        dropSelf(ModBlocks.MOSSY_SAPLING.get());
 
         this.add(ModBlocks.MOSSY_TREE_LEAVES.get(), block ->
-                createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, ModBlocks.MOSSY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         dropSelf(ModBlocks.MOSSY_WOOD_BUTTON.get());
         dropSelf(ModBlocks.MOSSY_WOOD_FENCE.get());

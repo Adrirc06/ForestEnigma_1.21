@@ -7,18 +7,47 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
+import java.util.OptionalInt;
 
 public class ModConfiguredFeatures {
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOSSY_KEY = registerKey("mossy");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        /*register(context, MOSSY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
+                new ForkingTrunkPlacer(4,4,3),
+
+                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),3),
+
+                new TwoLayersFeatureSize(1,0,2)).build());*/
+        register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
+                new DarkOakTrunkPlacer(6, 2, 1),
+
+                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
+                new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))).ignoreVines().build());
 
     }
 

@@ -28,7 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.SYLVANITE.get());
 
-        // saplingItem(ModBlocks.MOSSY_TREE_SAPLING);
+        saplingItem(ModBlocks.MOSSY_SAPLING);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
