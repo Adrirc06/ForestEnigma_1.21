@@ -31,23 +31,36 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOSSY_KEY = registerKey("mossy");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVANITE_ORE_KEY = registerKey("sylvanite_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        /*register(context, MOSSY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, MOSSY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
                 new ForkingTrunkPlacer(4,4,3),
 
                 BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),3),
 
-                new TwoLayersFeatureSize(1,0,2)).build());*/
-        register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
-                new DarkOakTrunkPlacer(6, 2, 1),
+                new TwoLayersFeatureSize(1,0,2)).build());
 
-                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
-                new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+//        register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+//                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
+//                new DarkOakTrunkPlacer(6, 2, 1),
+//
+//                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
+//                new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+//
+//                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))).ignoreVines().build());
 
-                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))).ignoreVines().build());
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+
+        List<OreConfiguration.TargetBlockState> sylvaniteOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.SYLVANITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_SYLVANITE_ORE.get().defaultBlockState())
+        );
+
+        register(context, SYLVANITE_ORE_KEY, Feature.ORE, new OreConfiguration(sylvaniteOres, 9));
 
     }
 

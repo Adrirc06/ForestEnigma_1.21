@@ -17,8 +17,14 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
+    public static final ResourceKey<PlacedFeature> SYLVANITE_ORE_PLACED_KEY = registerKey("sylvanite_ore_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        register(context, SYLVANITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SYLVANITE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(7,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

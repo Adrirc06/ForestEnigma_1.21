@@ -14,9 +14,17 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifier {
 
+    public static final ResourceKey<BiomeModifier> ADD_SYLVANITE_ORE = registerKey("add_sylvanite_ore");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
+
+        context.register(ADD_SYLVANITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.SYLVANITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
 
     }
 
