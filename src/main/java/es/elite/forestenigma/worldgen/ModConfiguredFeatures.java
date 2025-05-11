@@ -1,13 +1,16 @@
 package es.elite.forestenigma.worldgen;
 
+import com.google.common.collect.ImmutableList;
 import es.elite.forestenigma.ForestEnigma;
 import es.elite.forestenigma.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -18,9 +21,12 @@ import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeature
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -34,23 +40,32 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SYLVANITE_ORE_KEY = registerKey("sylvanite_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        register(context, MOSSY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        /*register(context, MOSSY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
                 new ForkingTrunkPlacer(4,4,3),
 
                 BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3),ConstantInt.of(3),3),
 
-                new TwoLayersFeatureSize(1,0,2)).build());
+                new TwoLayersFeatureSize(1,0,2)).build());*/
 
-//        register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
-//                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
-//                new DarkOakTrunkPlacer(6, 2, 1),
-//
-//                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
-//                new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
-//
-//                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))).ignoreVines().build());
+        register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
+                new DarkOakTrunkPlacer(8, 2, 3),
+
+                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
+                new DarkOakFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0)),
+
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))).ignoreVines().build());
+
+        /*register(context, MOSSY_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MOSSY_WOOD_LOG.get()),
+                new GiantTrunkPlacer(13, 2, 14),
+
+                BlockStateProvider.simple(ModBlocks.MOSSY_TREE_LEAVES.get()),
+                new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(13, 17)),
+
+                new TwoLayersFeatureSize(1, 1, 2))).build());*/
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
