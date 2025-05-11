@@ -7,6 +7,7 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -15,6 +16,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModBiomeModifier {
 
     public static final ResourceKey<BiomeModifier> ADD_SYLVANITE_ORE = registerKey("add_sylvanite_ore");
+
+    public static final ResourceKey<BiomeModifier> ADD_MOSSY_TREE = registerKey("add_mossy_tree");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -26,6 +29,11 @@ public class ModBiomeModifier {
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
 
+        context.register(ADD_MOSSY_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.MOSSY_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
