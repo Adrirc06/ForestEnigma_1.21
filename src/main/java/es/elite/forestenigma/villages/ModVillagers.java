@@ -43,24 +43,5 @@ public class ModVillagers {
         POI_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);
     }
-    /* SOUNDS */
-/*
-    @Nullable
-    @Override
-    protected SoundEvent getAmbientSound() {
-        return SoundEvents.ELDER_GUARDIAN_AMBIENT;
-    }
-
-   @Nullable
-    @Override
-    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.RAVAGER_HURT;
-    }
-
-    @Nullable
-    @Override
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.SNIFFER_DEATH;
-    }*/
 
 }
