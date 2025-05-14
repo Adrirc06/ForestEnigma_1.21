@@ -17,6 +17,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 
+import static net.minecraft.sounds.SoundEvents.VILLAGER_WORK_ARMORER;
+
 
 public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES =
@@ -27,13 +29,14 @@ public class ModVillagers {
 
 
     public static final RegistryObject<PoiType> ForestEnigma_POI = POI_TYPES.register("forestEnigma_poi",
-            () -> new PoiType(ImmutableSet.copyOf(Blocks.COMPOSTER.getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(Blocks.HONEY_BLOCK.getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> KAUPENGER = VILLAGER_PROFESSIONS.register("kaupenger",
             () -> new VillagerProfession("kaupenger", holder -> holder.value() == ForestEnigma_POI.get(),
                     holder -> holder.value() == ForestEnigma_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
-                    ModSounds.MAGIC_BLOCK_HIT.get()));
+                    VILLAGER_WORK_ARMORER));
+
 
 
     public static void register(IEventBus eventBus) {
