@@ -28,8 +28,8 @@ public class ModVillagers {
 
 
 
-    public static final RegistryObject<PoiType> ForestEnigma_POI = POI_TYPES.register("forestEnigma_poi",
-            () -> new PoiType(ImmutableSet.copyOf(Blocks.HONEY_BLOCK.getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> ForestEnigma_POI = POI_TYPES.register("forestenigma_poi",
+            () -> new PoiType(ImmutableSet.copyOf(Blocks.FURNACE.getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> KAUPENGER = VILLAGER_PROFESSIONS.register("kaupenger",
