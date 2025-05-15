@@ -21,7 +21,7 @@
   "block.forestenigma.deepslate_sylvanite_ore": "Deepslate Sylvanite Ore",
   "block.forestenigma.sylvanite_block": "Sylvanite Block",
 
-  "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger",
+  "villager.forestenigma.kaupenger": "Kaupenger",
 
   "creativetab.forestenigma.forestenigmatab": "The Forest Enigma"
 }
