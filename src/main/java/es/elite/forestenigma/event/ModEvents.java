@@ -32,6 +32,22 @@ public class ModEvents {
                     new ItemCost(ModItems.SYLVANITE.get(), 9),
                     new ItemStack(Items.BELL, 1), 1, 12, 0.05f));
         }
+        if(event.getType() == VillagerProfession.FARMER) {
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(ModItems.SYLVANITE.get(), 14), 6, 4, 0.05f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.DIAMOND, 3),
+                    new ItemStack(Items.ARROW, 32), 6, 4, 0.05f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.BELL, 1),
+                    new ItemStack(Items.ACTIVATOR_RAIL, 32), 1, 12, 0.05f));
+        }
+
 
     }
 }
