@@ -40,6 +40,6 @@ public class CustomVillagerRenderer extends VillagerRenderer {
             super.render(villager, entityYaw, partialTicks, poseStack, buffer, packedLight);
         }
     }
-    }
+}
 
 
